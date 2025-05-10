@@ -191,6 +191,10 @@ app.post("/new", async (req, res) => {
 
 });
 
+app.get("/health", (req, res) => {
+  res.status(200).json({ message: "OK" });
+});
+
 
 
 app.listen(port, () => {

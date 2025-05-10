@@ -109,7 +109,7 @@ app.post("/add", async (req, res) => {
   console.log(currentUser);
   const country = req.body.country;
   // console.log(country);
-  const index = countriesNameConstant.findIndex(name => name.toLowerCase().includes(country.toLowerCase()));
+  const index = countriesNameConstant.findIndex(name => name.toLowerCase().startsWith(country.toLowerCase()));
   // console.log(index);
   
   if (index === -1) {
